@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ervin Erviansyah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Mengatur tampilan awal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header */
+        header {
+            background-color: #FDFDFD;
+            height: 95px;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 5rem;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.1);
+            z-index: 1;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #4A4A4A;
+            font-weight: 600;
+            padding: 5px 0;
+            transition: all;
+            transition-duration: 300ms;
+            border-bottom: 3px solid #1f58ad00;
+        }
+
+        header nav ul li a:hover {
+            color: #1F57AD;
+            border-bottom: 3px solid #1F57AD;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Main */
+        main {
+            background-color: #F9F9F9;
+        }
+
+        .profil-home {
+            width: 100%;
+            height: 900px;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .profil-home .foto {
+            width: 40%;
+            height: 500px;
+            align-self: center;
+            display: flex;
+            margin-left: 200px;
+        }
+
+        .text h1 {
+            color: #1F57AD;
+            width: 617;
+            font-size: 72px;
+            line-height: 1.4em;
+            font-weight: bold;
+        }
+
+        .text h3 {
+            color: #4A4A4A;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .text a {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #1F57AD;
+            color: #F9F9F9;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 32px;
+            width: 196px;
+            text-align: center;
+            margin-top: 75px;
+        }
+
+        .quote {
+            background-color: #1F57AD;
+            padding: 40px;
+            color: #F9F9F9;
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .proyek-pekerjaan h3 {
+            text-align: center;
+            padding: 40px;
+            font-size: 40px;
+        }
+
+        .proyek-pekerjaan ul {
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            padding: 1rem 2rem;
+            list-style: none;
+            gap: 2rem;
+
+        }
+
+        .proyek-pekerjaan ul li a {
+            background-color: #1F57AD;
+            box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.24);
+            text-decoration: none;
+            color: #F9F9F9;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .pengalaman h3 {
+            text-align: center;
+            padding: 40px;
+            font-size: 40px;
+        }
+
+        .angka {
+            color: #1F57AD;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .catatan {
+            color: #4A4A4A;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .testimoni {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .testi1,
+        .testi2,
+        .testi3 {
+            background-color: #1F57AD;
+            padding: 25px;
+            font-size: 20px;
+            color: #F9F9F9;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        footer {
+            padding: 30px;
+            background-color: #1F57AD;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .logo-footer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-footer img {
+            filter: grayscale(100%) brightness(0) saturate(0) contrast(200%) invert(100%);
+        }
+
+        .logo-footer h4 {
+            color: #F9F9F9;
+            font-weight: bold;
+            word-wrap: break-word;
+        }
+
+        .profil-footer {
+            color: #F9F9F9;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            height: 4px;
+            background-color: #F9F9F9;
+            border: none;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            color: #F9F9F9;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="logo">
+            <a href="home.html">
+                <img src="logo/logo.png" alt="Logo Ervin Erviansyah">
+            </a>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.html">HOME</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profil-home">
+            <div class="foto">
+                <img src="foto-diri/foto-home.png" alt="Foto Diri Ervin Erviansyah">
+            </div>
+
+            <div class="text">
+                <h1>Ervin Erviansyah</h1>
+                <h3>Desainer Grafis</h3>
+                <a href="#Hire" class="hire">HIRE ME!</a>
+            </div>
+        </section>
+        <section class="quote">
+            <p>"Desain yang menakjubkan lahir dari tekad untuk terus berkembang dan berinovasi."</p>
+        </section>
+        <section class="proyek-pekerjaan">
+            <h3>Proyek Pekerjaan</h3>
+            <ul>
+                <li>
+                    <a href="#">Corporate Identity</a>
+                </li>
+                <li>
+                    <a href="#">Advertising</a>
+                </li>
+                <li>
+                    <a href="#">Publishing</a>
+                </li>
+                <li>
+                    <a href="#">Application</a>
+                </li>
+                <li>
+                    <a href="#">Motion Graphic</a>
+                </li>
+            </ul>
+        </section>
+        <section class="pengalaman">
+            <h3>Pengalaman</h3>
+            <p class="angka">15+</p>
+            <p class="catatan">Klien telah terselesaikan masalahnya</p>
+            <div class="testimoni">
+                <div class="testi1">
+                    <p>"Kualitas desain yang dihasilkan bagus."</p>
+                    <p>—Ahmad Ibrahim</p>
+                </div>
+                <div class="testi2">
+                    <p>"Terima kasih atas dedikasinya untuk membuat logo perusahaan kami. Kami sangat menghargai kerja
+                        samanya."</p>
+                    <p>—Restoran Saji Lestari</p>
+                </div>
+                <div class="testi3" <p>"Saya merasa beruntung sudah dibantu untuk bikin poster. Hasilnya memuaskan."</p>
+                    <p>—Fajar Setiawan</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="logo-footer">
+            <img src="logo/logo.png" alt="Logo Ervin Erviansyah">
+            <h4>ERVIN <br>
+                ERVIANSYAH</h4>
+        </section>
+        <section class="profil-footer">
+            <p>
+                Seorang desainer grafis dengan pengalaman 2 tahun di industri desain grafis. Telah terbiasa dengan
+                pembuatan desain untuk berbagai media seperti logo dan branding, ilustrasi, dan layouting. Terbukti
+                pernah mengerjakan proyek desain untuk 15+ klien dan menjaurai kontes desain.
+            </p>
+        </section>
+        <hr>
+        <section class="copyright">
+            <p>Copyright © 2024, Ervin Erviansyah</p>
+        </section>
+    </footer>
+</body>
+
+</html>
