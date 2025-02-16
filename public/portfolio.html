@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Ervin Erviansyah</title>
+    <title>Portfolio Ervin Erviansyah</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -58,88 +58,40 @@
             gap: 0.5rem;
         }
 
-        h1 {
+        main h1 {
             text-align: center;
             color: #1F57AD;
-            font-weight: bold;
-            font-size: 32px;
-        }
-
-        main p {
-            padding: 30px;
-        }
-
-        form {
-            padding: 30px;
-        }
-
-        form table tr td {
-            color: #4A4A4A;
+            font-size: 50px;
             font-weight: bold;
         }
 
-        .kirim {
-            background-color: #367E18;
-            padding: 10px 20px;
-            color: #F9F9F9;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        .batal {
-            background-color: #DF2E38;
-            padding: 7px 7px;
-            color: #F9F9F9;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        .email-contact,
-        .nomor-contact {
-            display: inline-block;
-            justify-content: center;
-            padding: 1rem 2rem;
-        }
-
-        .judul-nomor,
-        .judul-email {
-            color: #4A4A4A;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .bagian-email {
-            background-color: #1F57AD;
-            box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.24);
-            text-decoration: none;
-            color: #F9F9F9;
+        .portofolio {
+            margin: 10px auto;
             padding: 10px;
-            font-size: 20px;
-            font-weight: bold;
         }
 
-        .bagian-nomor {
-            background-color: #1F57AD;
-            box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.24);
-            text-decoration: none;
-            color: #F9F9F9;
-            padding: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 50px;
+        div.gallery {
+            margin: 5px;
+            float: left;
+            width: 300px;
+        }
+
+        div.gallery.img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            color: #4A4A4A;
         }
 
         /* Footer */
         footer {
             padding: 30px;
             background-color: #1F57AD;
-            display: flex;
+            display: inline-block;
             flex-direction: column;
             position: relative;
         }
@@ -185,14 +137,14 @@
 <body>
     <header>
         <section class="logo">
-            <a href="index.html">
-                <img src="logo/logo.png" alt="Logo Ervin Erviansyah">
+            <a href="../index.html">
+                <img src="assets/images/logo.png" alt="Logo Ervin Erviansyah">
             </a>
         </section>
         <nav>
             <ul>
                 <li>
-                    <a href="index.html">HOME</a>
+                    <a href="../index.html">HOME</a>
                 </li>
                 <li>
                     <a href="about.html">ABOUT</a>
@@ -208,51 +160,64 @@
     </header>
     <main>
         <h1>
-            Contact
+            Portfolio
         </h1>
-        <p>Tidak sabar untuk mendengar pendapat Anda! Mari mulai dengan mengisi formulir kontak di bawah ini. Apakah
-            Anda ingin memesan jasa, memberikan saran, atau hanya sekadar berdiskusi tentang proyek Anda, saya siap
-            mendengar dan memberikan solusi terbaik untuk Anda. Jangan ragu untuk menghubungi saya, saya sangat antusias
-            untuk bekerja sama dengan Anda!</p>
-        <form method="post" action="#">
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" name="name" size="30"></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="text" name="email" size="30"></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="text" name="phone" size="30"></td>
-                </tr>
-                <tr>
-                    <td>Subjek:</td>
-                    <td><input type="text" name="subject" size="30"></td>
-                </tr>
-            </table>
-            <br>
-            <textarea name="comment" rows="14" cols="65"></textarea>
-            <p>
-                <input type="reset" value="Batal" class="batal">
-                <input type="submit" value="Kirim" class="kirim">
-            </p>
-        </form>
-        <p>Anda juga bisa menghubungi saya di kontak berikut.</p>
-        <div class="email-contact">
-            <p class="judul-email">Email</p>
-            <p class="bagian-email">erviansyahbusiness@gmail.com</p>
-        </div>
-        <div class="nomor-contact">
-            <p class="judul-nomor">Nomor Telepon</p>
-            <p class="bagian-nomor">(+62) 831-0887-3299</p>
-        </div>
+        <section class="portofolio">
+            <div class="gallery">
+                <a target="_blank" href="assets/images/poster1.png">
+                    <img src="assets/images/poster1.png" alt="Poster Budak Sampah" width="100%">
+                </a>
+                <div class="desc"><b>Poster Budak Sampah</b> adalah hasil dari partisipasi saya dalam kegiatan lomba
+                    seni yang
+                    diselenggarakan oleh OSIS SMK Negeri 2 Bandung. Lomba tersebut mengajukan berbagai tema, dan saya
+                    memilih untuk fokus pada isu lingkungan. Untuk membuat poster ini, saya memanfaatkan software
+                    Blender untuk proses pembuatan, kemudian melakukan compositing menggunakan Adobe Photoshop.
+                    Alhasil, poster tersebut membawa <b>saya meraih posisi juara 3</b> dalam acara tersebut.</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="assets/images/ilustrasi1.png">
+                    <img src="assets/images/ilustrasi1.png" alt="Ilustrasi Ragam Hias Flora" width="100%">
+                </a>
+                <div class="desc">
+                    <b>Ilustrasi Ragam Hias Flora</b> adalah proyek ilustrasi yang ditujukkan untuk Komunitas Pencinta
+                    Tanaman
+                    Bandung. Komunitas Pencinta Tanaman Bandung adalah sebuah komunitas bagi warga Bandung yang
+                    mencintai berbagai
+                    jenis tanaman. Saat pembahasan proyek, klien meminta saya untuk
+                    menggunakan <b>simbol dari empat musim (musim semi, musim panas, musim gugur, dan musim dingin)</b>
+                    sebagai
+                    representasi keanekaragaman tanaman—jenis tanaman berdasarkan musim. Setelah diskusi, saya
+                    memberikan solusi berupa penggunaan simbol warna atau ilustrasi tanaman berdasarkan musim. Klien
+                    juga memilih berdasarkan simbol warna dan sketsa yang disediakan.
+                </div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="assets/images/logo1.png">
+                    <img src="assets/images/logo1.png" alt="Logo Fovin" width="100%">
+                </a>
+                <div class="desc"><b>Fovin merupakan branding makanan pedas.</b> Keunikan dari Fovin ialah harganya terjangkau.
+                    Sebelumnya hanya menjual produk keripik namun sekarang menjual makanan lainnya seperti seblak maupun
+                    ayam goreng.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="assets/images/logo2.png">
+                    <img src="assets/images/logo2.png" alt="Logo Barbarians" width="100%">
+                </a>
+                <div class="desc"><b>Logo Barbarians.</b> Barbarians merupakan nama kelas atau nama pengganti dari kelas X TKI 6 - SMK Negeri 2 Bandung. </div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="assets/images/logo3.png">
+                    <img src="assets/images/logo3.png" alt="Logo Nikka Festival" width="100%">
+                </a>
+                <div class="desc"><b>Logo Nikka Festival</b></div>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="logo-footer">
-            <img src="logo/logo.png" alt="Logo Ervin Erviansyah">
+            <img src="assets/images/logo.png" alt="Logo Ervin Erviansyah">
             <h4>ERVIN <br>
                 ERVIANSYAH</h4>
         </section>
