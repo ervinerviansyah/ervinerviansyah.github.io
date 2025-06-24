@@ -2,15 +2,11 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ervin Erviansyah</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <style>
+    <link rel="stylesheet" href="./src/output.css" />
+    <!-- <style>
         /* Mengatur tampilan awal */
         * {
             margin: 0;
@@ -224,43 +220,55 @@
             color: #F9F9F9;
             margin-top: 10px;
         }
-    </style>
+    </style> -->
 </head>
 
-<body>
-    <header>
-        <section class="logo">
+<body class="bg-gray-100">
+    <header class="shadow-gray-300 shadow-md flex justify-between items-center p-3 bg-white">
+
+        <!-- Logo -->
+        <section class="flex items-center-safe gap-2 ml-10 bg-white">
             <a href="index.html">
-                <img src="public/assets/images/logo.png" alt="Logo Ervin Erviansyah">
+                <img src="public/assets/img/logo.png" alt="Logo Ervin Erviansyah">
             </a>
         </section>
-        <nav>
-            <ul>
-                <li>
+
+        <!-- Navigation Header -->
+        <nav class="font-poppins font-bold text-gray-700 mx-14">
+            <ul class="flex items-center gap-8">
+                <li class="hover:text-blue-800 transition-colors duration-300">
                     <a href="index.html">HOME</a>
                 </li>
-                <li>
-                    <a href="public/about.html">ABOUT</a>
+                <li class="hover:text-blue-800 transition-colors duration-300">
+                    <a href="#">PORTFOLIO</a>
                 </li>
-                <li>
-                    <a href="public/portfolio.html">PORTFOLIO</a>
+                <li class="hover:text-blue-800 transition-colors duration-300">
+                    <a href="#">BLOG</a>
                 </li>
-                <li>
-                    <a href="public/contact.html">CONTACT</a>
+                <li class="hover:text-blue-800 transition-colors duration-300">
+                    <a href="#">STORE</a>
+                </li>
+                <li class="hover:text-blue-800 transition-colors duration-300">
+                    <a href="#">PROFILE</a>
                 </li>
             </ul>
         </nav>
+
     </header>
-    <main>
-        <section class="profil-home">
-            <div class="foto">
-                <img src="public/assets/images/foto-home.png" alt="Foto Diri Ervin Erviansyah">
+    
+    <main class="">
+        <!-- Hero Section -->
+        <section class="m-1 mx-50 p-10 px-10 flex justify-between items-center">
+            
+            <div class="ml-20">
+                <h2 class="text-2xl font-semibold font-poppins text-slate-800">Halo!</h2>
+                <h1 class="text-4xl font-bold font-poppins text-blue-800">Ervin Erviansyah</h1>
+                <h3 class="text-3xl font-semibold font-poppins text-slate-800">3D Model Artist</h3>
+                <a href="#Hire" class="hire">HIRE ME!</a>
             </div>
 
-            <div class="text">
-                <h1>Ervin Erviansyah</h1>
-                <h3>Desainer Grafis</h3>
-                <a href="#Hire" class="hire">HIRE ME!</a>
+            <div class="mx-20">
+                <img src="public/assets/images/foto-home.png" alt="Foto Diri Ervin Erviansyah">
             </div>
         </section>
         <section class="quote">
