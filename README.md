@@ -81,7 +81,7 @@ Untuk preview website secara real time bisa install extension Live Share, maka f
 Sayangnya repository ini belum menerima kontribusi orang lain dikarenakan ini merupakan tugas akhir pada mata kuliah Multimedia Interaktif I.
 
 ## Lisensi
-Repository ini berada pada lisensi MIT, bisa dilihat pada file [LICENSE](license) untuk informasi lebih lanjut.
+Repository ini berada pada lisensi MIT, bisa dilihat pada file [LICENSE](LICENSE) untuk informasi lebih lanjut.
 
 ## Kontak Informasi
 Apabila ada pertanyaan atau saran, bisa kontak saya pada:
