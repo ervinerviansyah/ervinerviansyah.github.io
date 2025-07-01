@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../../../src/output.css" />
+    <link rel="shortcut icon" href="../../assets/img/icon/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="bg-gray-200 min-h-screen flex flex-col">
+    <header class="shadow-gray-300 shadow-md flex flex-wrap justify-between items-center p-3 bg-white">
+
+        <!-- Logo -->
+        <section class="flex items-center gap-2 ml-4 bg-white">
+            <a href="../../../index.html" class="flex items-center gap-2">
+                <img src="../../assets/img/logo/logo.png" alt="Logo Ervin Erviansyah" class="w-12 h-12" />
+            </a>
+        </section>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="nav-toggle" aria-label="Toggle navigation"
+            class="md:hidden block text-blue-800 mr-4 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Navigation Header -->
+        <nav id="nav-menu"
+            class="w-full md:w-auto  font-poppins font-bold text-slate-800 mx-0 md:mx-10 hidden md:block">
+            <ul
+                class="flex flex-col md:flex-row items-center gap-2 md:gap-8 bg-white md:bg-transparent p-4 md:p-0 rounded-md">
+                <li class="w-full md:w-auto">
+                    <a href="../../../index.html"
+                        class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">HOME</a>
+                </li>
+                <li class="w-full md:w-auto">
+                    <a href="portfolio.html"
+                        class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">PORTFOLIO</a>
+                </li>
+                <li class="w-full md:w-auto">
+                    <a href="blog.html"
+                        class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">BLOG</a>
+                </li>
+                <li class="w-full md:w-auto">
+                    <a href="store.html"
+                        class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">STORE</a>
+                </li>
+                <li class="w-full md:w-auto">
+                    <a href="profile.html"
+                        class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">PROFILE</a>
+                </li>
+            </ul>
+        </nav>
+
+        <script>
+            // Simple mobile nav toggle
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <footer>
+        <section class="bg-blue-800 p-7">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 md:gap-0">
+                <!-- Left: Logo & Brand Bio -->
+                <div class="flex flex-col items-start justify-start flex-1 min-w-[200px]">
+                    <img src="../../assets/img/logo/logo-white.png" alt="Logo Ervin Erviansyah"
+                        class="w-16 h-16 mb-3 object-contain">
+                    <p class="text-white font-poppins font-normal text-base text-justify">
+                        Ervin Erviansyah adalah fotografer berbasis di Bandung yang fokus mengabadikan momen dengan
+                        pendekatan visual autentik. Ia menekankan detail dan narasi dalam setiap karya, menciptakan
+                        hasil
+                        yang personal dan bermakna.
+                    </p>
+                </div>
+                <!-- Center: Social Media -->
+                <div class="flex flex-col items-center flex-1 min-w-[200px]">
+                    <h3 class="text-white font-poppins font-semibold text-lg mb-3">Temukan Saya</h3>
+                    <div class="flex flex-col gap-6">
+                        <a href="https://www.instagram.com/ervinerviansyah_" target="_blank"
+                            class="flex flex-col items-center gap-2">
+                            <img src="../../assets/img/icon/dummyIcon.png" alt="Instagram Ervin Erviansyah"
+                                class="w-12 h-12">
+                            <span class="text-white font-poppins text-base">@ervinerviansyah</span>
+                        </a>
+                        <a href="https://www.facebook.com/ervinerviansyah" target="_blank"
+                            class="flex flex-col items-center gap-2">
+                            <img src="../../assets/img/icon/dummyIcon.png" alt="Facebook Ervin Erviansyah"
+                                class="w-12 h-12">
+                            <span class="text-white font-poppins text-base">@ervinerviansyah</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ervinerviansyah" target="_blank"
+                            class="flex flex-col items-center gap-2">
+                            <img src="../../assets/img/icon/dummyIcon.png" alt="LinkedIn Ervin Erviansyah"
+                                class="w-12 h-12">
+                            <span class="text-white font-poppins text-base">@ervinerviansyah</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right: Navigation -->
+                <div class="flex flex-col items-start flex-1 min-w-[200px]">
+                    <h3 class="text-white font-poppins font-semibold text-lg mb-3">Navigasi</h3>
+                    <ul class="flex flex-col gap-2 w-full">
+                        <li>
+                            <a href="index.html"
+                                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                                HOME
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                                PORTFOLIO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                                BLOG
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                                STORE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                                PROFILE
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Divider -->
+            <hr class="border-t border-blue-300 my-8">
+            <!-- Copyright -->
+            <div class="text-center">
+                <p class="text-white font-poppins font-normal text-base mb-2">
+                    &copy; 2025 Ervin Erviansyah. All rights reserved.
+                </p>
+                <p class="text-white font-poppins font-normal text-base">
+                    Made with <span class="text-red-600">&hearts;</span> by Ervin Erviansyah
+                </p>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>
