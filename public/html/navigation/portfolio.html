@@ -64,6 +64,188 @@
         </script>
     </header>
 
+<main>
+    <h1 class="font-poppins text-6xl font-bold text-blue-800 text-center my-10">PORTFOLIO</h1>
+    <section class="flex flex-wrap justify-center gap-4 mb-10 px-4 md:px-0">
+        <button data-filter="all"
+            class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            ALL
+        </button>
+        <button data-filter="portrait"
+            class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            Portrait Photography
+        </button>
+        <button data-filter="product"
+            class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            Product Photography
+        </button>
+        <button data-filter="architecture"
+            class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            Architectural Photography
+        </button>
+        <button data-filter="street"
+            class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            Street Photography
+        </button>
+        <button data-filter="nature"
+            class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            Nature & Wildlife Photography
+        </button>
+    </section>
+
+    <section class="bg-blue-800 p-7 text-center mb-15 mx-4 md:mx-10 rounded-3xl md:rounded-4xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-7 mb-10" id="portfolio-grid">
+
+            <!-- Card 1 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="portrait">
+                <img src="../../assets/img/portfolio/konserAndra.jpg" alt="Festival Nyanyi dan Cosplay"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Komersial</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Festival Nyanyi dan Cosplay</p>
+                <p class="text-justify font-poppins font-normal">01 Juni 2025 - Bandung Indah Plaza</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="portrait">
+                <img src="../../assets/img/portfolio/hidupDanMati.jpg" alt="Antara Hidup dan Mati"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Tugas</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Antara Hidup dan Mati</p>
+                <p class="text-justify font-poppins font-normal">18 Mei 2025 - Tahura Dago</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="product">
+                <img src="../../assets/img/portfolio/makanan.jpg" alt="Produk Makanan"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Tugas</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Produk Makanan</p>
+                <p class="text-justify font-poppins font-normal">29 April 2025 - Unikom</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="street">
+                <img src="../../assets/img/portfolio/panning.jpg" alt="Foto Panning Motor"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Energi dalam Berkendara</p>
+                <p class="text-justify font-poppins font-normal">08 Desember 2024 - Jalan ABC</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="street">
+                <img src="../../assets/img/portfolio/macet.jpg" alt="Foto Macet"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Macet</p>
+                <p class="text-justify font-poppins font-normal">08 Desember 2024 - Jalan ABC</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="nature">
+                <img src="../../assets/img/portfolio/ratu.jpg" alt="Foto Ratu Serangga"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Ratu</p>
+                <p class="text-justify font-poppins font-normal">03 Juni 2025 - Batu Kuda</p>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="architecture">
+                <img src="../../assets/img/portfolio/braga.jpg" alt="Foto Gedung BJB di Braga"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Gedung BJB</p>
+                <p class="text-justify font-poppins font-normal">08 Desember 2024 - Jalan Braga</p>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="nature">
+                <img src="../../assets/img/portfolio/hewan.jpg" alt="Hewan di Taman"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Tugas</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Berdiam Diri</p>
+                <p class="text-justify font-poppins font-normal">20 Desember 2024 - Taman Lansia</p>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="architecture">
+                <img src="../../assets/img/portfolio/rumah.jpg" alt="Foto Rumah di Hutan"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Kembali ke Alam</p>
+                <p class="text-justify font-poppins font-normal">03 Juni 2025 - Batu Kuda</p>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="street">
+                <img src="../../assets/img/portfolio/bolaDunia.jpg" alt="Foto Bola Dunia"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Freedom</p>
+                <p class="text-justify font-poppins font-normal">08 Desember 2024 - Alun-alun Bandung</p>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="nature">
+                <img src="../../assets/img/portfolio/pohonHitamPutih.jpg" alt="Foto Pepohonan dengan Hitam Putih"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Seperti Cat</p>
+                <p class="text-justify font-poppins font-normal">03 Juni 2025 - Batu Kuda</p>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
+                data-category="street">
+                <img src="../../assets/img/portfolio/penanda.jpg" alt="Produk Makanan"
+                    class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy">
+                <p class="font-poppins font-normal text-slate-800 text-justify">Proyek Personal</p>
+                <p class="text-slate-800 font-poppins font-bold text-justify text-xl">Peringatan</p>
+                <p class="text-justify font-poppins font-normal">21 April 2025 - Taman Lansia</p>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        // Portfolio filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active style from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-blue-800');
+                    b.classList.add('bg-slate-800');
+                });
+                // Add active style to clicked button
+                this.classList.remove('bg-slate-800');
+                this.classList.add('bg-blue-800');
+
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.portfolio-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        // Set ALL as default active
+        document.querySelector('.filter-btn[data-filter="all"]').click();
+    </script>
+</main>
+
     <footer>
         <section class="bg-blue-800 p-7">
             <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 md:gap-0">
@@ -144,9 +326,6 @@
             <div class="text-center">
                 <p class="text-white font-poppins font-normal text-base mb-2">
                     &copy; 2025 Ervin Erviansyah. All rights reserved.
-                </p>
-                <p class="text-white font-poppins font-normal text-base">
-                    Made with <span class="text-red-600">&hearts;</span> by Ervin Erviansyah
                 </p>
             </div>
         </section>
