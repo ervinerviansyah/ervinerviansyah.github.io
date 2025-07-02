@@ -11,7 +11,6 @@
 
 <body class="bg-gray-200 min-h-screen flex flex-col">
     <header class="shadow-gray-300 shadow-md flex flex-wrap justify-between items-center p-3 bg-white">
-
         <!-- Logo -->
         <section class="flex items-center gap-2 ml-4 bg-white">
             <a href="../../../index.html" class="flex items-center gap-2">
@@ -28,8 +27,7 @@
         </button>
 
         <!-- Navigation Header -->
-        <nav id="nav-menu"
-            class="w-full md:w-auto  font-poppins font-bold text-slate-800 mx-0 md:mx-10 hidden md:block">
+        <nav id="nav-menu" class="w-full md:w-auto font-poppins font-bold text-slate-800 mx-0 md:mx-10 hidden md:block">
             <ul
                 class="flex flex-col md:flex-row items-center gap-2 md:gap-8 bg-white md:bg-transparent p-4 md:p-0 rounded-md">
                 <li class="w-full md:w-auto">
@@ -57,17 +55,232 @@
 
         <script>
             // Simple mobile nav toggle
-            const navToggle = document.getElementById('nav-toggle');
-            const navMenu = document.getElementById('nav-menu');
-            navToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('hidden');
+            const navToggle = document.getElementById("nav-toggle");
+            const navMenu = document.getElementById("nav-menu");
+            navToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("hidden");
             });
         </script>
     </header>
 
-<main class="mb-20 flex-1">
+    <main class="mb-20 flex-1">
+        <h1 class="font-poppins text-6xl font-bold text-blue-800 text-center my-10">
+            STORE
+        </h1>
+        <section class="flex flex-wrap justify-center gap-4 mb-10 px-4 md:px-0">
+            <button data-filter="all"
+                class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                ALL
+            </button>
+            <button data-filter="preset"
+                class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Preset & Luts
+            </button>
+            <button data-filter="content"
+                class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Template Content
+            </button>
+            <button data-filter="stock"
+                class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Stock Photo
+            </button>
+            <button data-filter="texture"
+                class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                3D Texture
+            </button>
+            <button data-filter="merchandise"
+                class="filter-btn bg-slate-800 text-white font-poppins font-bold px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Merchandise
+            </button>
+        </section>
 
-</main>
+        <section class="bg-blue-800 p-7 text-center mb-15 mx-4 md:mx-10 rounded-3xl md:rounded-4xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-7 mb-10" id="portfolio-grid">
+                
+                <!-- Card 1 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="preset">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Preset Pack #1"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Preset Pack #1
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="preset">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Preset Pack #2"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Preset Pack #2
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="content">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Instagram Template Kit"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Instagram Template Kit
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="stock">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Photo Pack #1"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Photo Pack #1
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="texture">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Texture Pack #1"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Texture Pack #1
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="preset">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="LUTs Pack #1"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        LUTs Pack #1
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="content">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Mockup Pack #1"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Mockup Pack #1
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 8 -->
+                <div class="portfolio-card bg-white p-6 rounded-lg shadow-md flex flex-col h-full" data-category="merchandise">
+                    <img src="../../assets/img/store/dummyStore.JPG" alt="Frame Photo"
+                        class="w-full h-48 object-cover rounded-lg mb-3" loading="lazy" />
+                    <p class="text-slate-800 font-poppins font-bold text-justify text-xl">
+                        Frame Photo
+                    </p>
+                    <p class="text-justify font-poppins font-normal">
+                        Rp50.000
+                    </p>
+                
+                    <div class="flex justify-end">
+                        <button type="button" onclick="location.href='#'"
+                            class="bg-yellow-500 text-slate-800 font-poppins font-bold py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                            ->
+                        </button>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+        <script>
+            // Portfolio filter
+            document.querySelectorAll(".filter-btn").forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    // Remove active style from all buttons
+                    document.querySelectorAll(".filter-btn").forEach((b) => {
+                        b.classList.remove("bg-blue-800");
+                        b.classList.add("bg-slate-800");
+                    });
+                    // Add active style to clicked button
+                    this.classList.remove("bg-slate-800");
+                    this.classList.add("bg-blue-800");
+
+                    const filter = this.getAttribute("data-filter");
+                    document.querySelectorAll(".portfolio-card").forEach((card) => {
+                        if (
+                            filter === "all" ||
+                            card.getAttribute("data-category") === filter
+                        ) {
+                            card.style.display = "";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+            // Set ALL as default active
+            document.querySelector('.filter-btn[data-filter="all"]').click();
+        </script>
+    </main>
 
     <footer>
         <section class="bg-blue-800 p-7">
@@ -75,41 +288,45 @@
                 <!-- Left: Logo & Brand Bio -->
                 <div class="flex flex-col items-start justify-start flex-1 min-w-[200px]">
                     <img src="../../assets/img/logo/logo-white.png" alt="Logo Ervin Erviansyah"
-                        class="w-16 h-16 mb-3 object-contain">
+                        class="w-16 h-16 mb-3 object-contain" />
                     <p class="text-white font-poppins font-normal text-base text-justify">
-                        Ervin Erviansyah adalah fotografer berbasis di Bandung yang fokus mengabadikan momen dengan
-                        pendekatan visual autentik. Ia menekankan detail dan narasi dalam setiap karya, menciptakan
-                        hasil
+                        Ervin Erviansyah adalah fotografer berbasis di Bandung yang fokus
+                        mengabadikan momen dengan pendekatan visual autentik. Ia
+                        menekankan detail dan narasi dalam setiap karya, menciptakan hasil
                         yang personal dan bermakna.
                     </p>
                 </div>
                 <!-- Center: Social Media -->
                 <div class="flex flex-col items-center flex-1 min-w-[200px]">
-                    <h3 class="text-white font-poppins font-semibold text-lg mb-3">Temukan Saya</h3>
+                    <h3 class="text-white font-poppins font-semibold text-lg mb-3">
+                        Temukan Saya
+                    </h3>
                     <div class="flex flex-col gap-6">
                         <a href="https://www.instagram.com/ervinerviansyah_" target="_blank"
                             class="flex flex-col items-center gap-2">
                             <img src="../../assets/img/icon/dummyIcon.png" alt="Instagram Ervin Erviansyah"
-                                class="w-12 h-12">
+                                class="w-12 h-12" />
                             <span class="text-white font-poppins text-base">@ervinerviansyah</span>
                         </a>
                         <a href="https://www.facebook.com/ervinerviansyah" target="_blank"
                             class="flex flex-col items-center gap-2">
                             <img src="../../assets/img/icon/dummyIcon.png" alt="Facebook Ervin Erviansyah"
-                                class="w-12 h-12">
+                                class="w-12 h-12" />
                             <span class="text-white font-poppins text-base">@ervinerviansyah</span>
                         </a>
                         <a href="https://www.linkedin.com/in/ervinerviansyah" target="_blank"
                             class="flex flex-col items-center gap-2">
                             <img src="../../assets/img/icon/dummyIcon.png" alt="LinkedIn Ervin Erviansyah"
-                                class="w-12 h-12">
+                                class="w-12 h-12" />
                             <span class="text-white font-poppins text-base">@ervinerviansyah</span>
                         </a>
                     </div>
                 </div>
                 <!-- Right: Navigation -->
                 <div class="flex flex-col items-start flex-1 min-w-[200px]">
-                    <h3 class="text-white font-poppins font-semibold text-lg mb-3">Navigasi</h3>
+                    <h3 class="text-white font-poppins font-semibold text-lg mb-3">
+                        Navigasi
+                    </h3>
                     <ul class="flex flex-col gap-2 w-full">
                         <li>
                             <a href="index.html"
@@ -145,7 +362,7 @@
                 </div>
             </div>
             <!-- Divider -->
-            <hr class="border-t border-blue-300 my-8">
+            <hr class="border-t border-blue-300 my-8" />
             <!-- Copyright -->
             <div class="text-center">
                 <p class="text-white font-poppins font-normal text-base mb-2">
@@ -154,7 +371,6 @@
             </div>
         </section>
     </footer>
-
 </body>
 
 </html>
