@@ -9,65 +9,120 @@
   <link rel="shortcut icon" href="../../assets/img/icon/favicon.ico" type="image/x-icon" />
 </head>
 
-<body class="bg-gray-200 min-h-screen flex flex-col">
-  <header class="shadow-gray-300 shadow-md flex flex-wrap justify-between items-center p-3 bg-white">
-
+<body class="bg-gray-200 dark:bg-slate-800 min-h-screen flex flex-col">
+  <header
+    class="shadow-gray-300 dark:shadow-none shadow-md flex flex-wrap justify-between items-center p-3 bg-white dark:bg-slate-800"
+    id="main-header">
     <!-- Logo -->
-    <section class="flex items-center gap-2 ml-4 bg-white">
-      <a href="../../../index.html" class="flex items-center gap-2">
-        <img src="../../assets/img/logo/logo.png" alt="Logo Ervin Erviansyah" class="w-12 h-12" />
+    <section class="flex items-center gap-2 ml-4  ">
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="../../assets/img/logo/logo.png" alt="Logo Ervin Erviansyah" class="w-12 h-12 block dark:hidden"
+          id="logo-light" />
+        <img src="../../assets/img/logo/logo-white.png" alt="Logo Ervin Erviansyah (Dark Mode)"
+          class="w-12 h-12 hidden dark:block" id="logo-dark" />
       </a>
     </section>
-
+  
     <!-- Hamburger Menu for Mobile -->
     <button id="nav-toggle" aria-label="Toggle navigation"
-      class="md:hidden block text-blue-800 mr-4 focus:outline-none">
+      class="md:hidden block text-blue-800 dark:text-white mr-4 focus:outline-none">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-
+  
     <!-- Navigation Header -->
-    <nav id="nav-menu" class="w-full md:w-auto  font-poppins font-bold text-slate-800 mx-0 md:mx-10 hidden md:block">
+    <nav id="nav-menu"
+      class="w-full md:w-auto font-poppins font-bold text-slate-800 dark:text-white mx-0 md:mx-10 hidden md:block">
       <ul
-        class="flex flex-col md:flex-row items-center gap-2 md:gap-8 bg-white md:bg-transparent p-4 md:p-0 rounded-md">
+        class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 bg-white dark:bg-slate-800 p-4 md:p-0 rounded-md">
         <li class="w-full md:w-auto">
           <a href="../../../index.html"
-            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">HOME</a>
+            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2 dark:hover:bg-blue-900">HOME</a>
         </li>
         <li class="w-full md:w-auto">
-          <a href="portfolio.html"
-            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">PORTFOLIO</a>
+          <a href="../navigation/portfolio.html"
+            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2 dark:hover:bg-blue-900">PORTFOLIO</a>
         </li>
         <li class="w-full md:w-auto">
-          <a href="blog.html"
-            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">BLOG</a>
+          <a href="../navigation/blog.html"
+            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2 dark:hover:bg-blue-900">BLOG</a>
         </li>
         <li class="w-full md:w-auto">
-          <a href="store.html"
-            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">STORE</a>
+          <a href="../navigation/store.html"
+            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2 dark:hover:bg-blue-900">STORE</a>
         </li>
         <li class="w-full md:w-auto">
-          <a href="profile.html"
-            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2">PROFILE</a>
+          <a href="../navigation/profile.html"
+            class="block hover:text-white transition-colors duration-300 hover:bg-blue-800 hover:rounded-md p-2 dark:hover:bg-blue-900">PROFILE</a>
+        </li>
+        <!-- Tombol dark mode sekarang rata kiri di mobile -->
+        <li class="w-full md:w-auto flex justify-start md:justify-center">
+          <button id="dark-mode-toggle" aria-label="Toggle dark mode"
+            class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-blue-600 transition-colors duration-300 focus:outline-none"
+            type="button">
+            <span id="dark-mode-icon" style="display: inline-block; transition: opacity 0.3s;">
+              <!-- Sun Icon (Light Mode) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-yellow-500" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="currentColor" />
+                <path stroke="currentColor" stroke-width="2"
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+              </svg>
+            </span>
+          </button>
         </li>
       </ul>
-    </nav>
+      <script>
+        // Tailwind dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeIcon = document.getElementById('dark-mode-icon');
+        function setDarkMode(dark) {
+          if (dark) {
+            document.documentElement.classList.add('dark');
+            darkModeIcon.innerHTML = `
+                    <!-- Moon Icon (Dark Mode) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-blue-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke="currentColor" stroke-width="2" fill="currentColor" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+                    </svg>
+                  `;
+          } else {
+            document.documentElement.classList.remove('dark');
+            darkModeIcon.innerHTML = `
+                    <!-- Sun Icon (Light Mode) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+                      <path stroke="currentColor" stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                  `;
+          }
+        }
+        // Load dark mode preference
+        let isDark = localStorage.getItem('theme') === 'dark';
+        setDarkMode(isDark);
 
+        darkModeToggle.addEventListener('click', () => {
+          isDark = !isDark;
+          setDarkMode(isDark);
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+      </script>
+    </nav>
+  
     <script>
       // Simple mobile nav toggle
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('hidden');
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
       });
     </script>
   </header>
 
   <main class="mb-20 flex-1">
-    <h1 class="font-poppins text-6xl font-bold text-blue-800 text-center my-10">BLOG</h1>
+    <h1 class="font-poppins text-6xl font-bold text-blue-800 dark:text-blue-600 text-center my-10">BLOG</h1>
 
-    <section class="bg-blue-800 p-7 text-center mb-15 mx-4 md:mx-10 rounded-3xl md:rounded-4xl">
+    <section class="bg-blue-800 dark:bg-slate-800 p-7 text-center mb-15 mx-4 md:mx-10 rounded-3xl md:rounded-4xl">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-7 mb-10" id="portfolio-grid">
 
         <!-- Card 1 -->
@@ -135,87 +190,90 @@
 
   </main>
 
-  <footer>
-    <section class="bg-blue-800 p-7">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 md:gap-0">
-        <!-- Left: Logo & Brand Bio -->
-        <div class="flex flex-col items-start justify-start flex-1 min-w-[200px]">
-          <img src="../../assets/img/logo/logo-white.png" alt="Logo Ervin Erviansyah"
-            class="w-16 h-16 mb-3 object-contain">
-          <p class="text-white font-poppins font-normal text-base text-justify">
-            Ervin Erviansyah adalah fotografer berbasis di Bandung yang fokus mengabadikan momen dengan
-            pendekatan visual autentik. Ia menekankan detail dan narasi dalam setiap karya, menciptakan
-            hasil
-            yang personal dan bermakna.
-          </p>
-        </div>
-        <!-- Center: Social Media -->
-        <div class="flex flex-col items-center flex-1 min-w-[200px]">
-          <h3 class="text-white font-poppins font-semibold text-lg mb-3">Temukan Saya</h3>
-          <div class="flex flex-col gap-6">
-            <a href="https://www.instagram.com/ervinerviansyah_" target="_blank"
-              class="flex flex-col items-center gap-2">
-              <img src="../../assets/img/icon/dummyIcon.png" alt="Instagram Ervin Erviansyah" class="w-12 h-12">
-              <span class="text-white font-poppins text-base">Instagram</span>
-            </a>
-            <a href="https://unsplash.com/@ervinerviansyah" target="_blank" class="flex flex-col items-center gap-2">
-              <img src="../../assets/img/icon/dummyIcon.png" alt="Unsplash Ervin Erviansyah" class="w-12 h-12">
-              <span class="text-white font-poppins text-base">Unsplash</span>
-            </a>
-            <a href="https://www.linkedin.com/in/ervinerviansyah" target="_blank"
-              class="flex flex-col items-center gap-2">
-              <img src="../../assets/img/icon/dummyIcon.png" alt="LinkedIn Ervin Erviansyah" class="w-12 h-12">
-              <span class="text-white font-poppins text-base">LinkedIn</span>
-            </a>
+    <footer>
+      <section class="bg-blue-800 dark:bg-slate-800 p-7">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 md:gap-0">
+          <!-- Left: Logo & Brand Bio -->
+          <div class="flex flex-col items-start justify-start flex-1 min-w-[200px]">
+            <img src="../../assets/img/logo/logo-white.png" alt="Logo Ervin Erviansyah"
+              class="w-16 h-16 mb-3 object-contain" />
+            <p class="text-white dark:text-slate-400 font-poppins font-normal text-base text-justify">
+              Ervin Erviansyah adalah fotografer berbasis di Bandung yang fokus
+              mengabadikan momen dengan pendekatan visual autentik. Ia
+              menekankan detail dan narasi dalam setiap karya, menciptakan hasil
+              yang personal dan bermakna.
+            </p>
+          </div>
+          <!-- Center: Social Media -->
+          <div class="flex flex-col items-center flex-1 min-w-[200px]">
+            <h3 class="text-white dark:text-slate-200 font-poppins font-semibold text-lg mb-3">
+              Temukan Saya
+            </h3>
+            <div class="flex flex-col gap-6">
+              <a href="https://www.instagram.com/ervinerviansyah_" target="_blank" class="flex flex-col items-center gap-2">
+                <img src="../../assets/img/icon/dummyIcon.png" alt="Instagram Ervin Erviansyah" class="w-12 h-12" />
+                <span class="text-white dark:text-slate-400 font-poppins text-base">Instagram</span>
+              </a>
+              <a href="https://unsplash.com/@ervinerviansyah" target="_blank" class="flex flex-col items-center gap-2">
+                <img src="../../assets/img/icon/dummyIcon.png" alt="Unsplash Ervin Erviansyah" class="w-12 h-12" />
+                <span class="text-white dark:text-slate-400  font-poppins text-base">Unsplash</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ervinerviansyah" target="_blank"
+                class="flex flex-col items-center gap-2">
+                <img src="../../assets/img/icon/dummyIcon.png" alt="LinkedIn Ervin Erviansyah" class="w-12 h-12" />
+                <span class="text-white dark:text-slate-400  font-poppins text-base">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <!-- Right: Navigation -->
+          <div class="flex flex-col items-start flex-1 min-w-[200px]">
+            <h3 class="text-white dark:text-slate-200 font-poppins font-semibold text-lg mb-3">
+              Navigasi
+            </h3>
+            <ul class="flex flex-col gap-2 w-full">
+              <li>
+                <a href="/index.html"
+                  class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white dark:text-slate-400 hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                  HOME
+                </a>
+              </li>
+              <li>
+                <a href="/public/html/navigation/portfolio.html"
+                  class="block w-full px-4 py-2 rounded-md font-poppins font-bold dark:text-slate-400  text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                  PORTFOLIO
+                </a>
+              </li>
+              <li>
+                <a href="/public/html/navigation/blog.html"
+                  class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white dark:text-slate-400 hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                  BLOG
+                </a>
+              </li>
+              <li>
+                <a href="/public/html/navigation/store.html"
+                  class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white dark:text-slate-400 hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                  STORE
+                </a>
+              </li>
+              <li>
+                <a href="/public/html/navigation/profile.html"
+                  class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white dark:text-slate-400 hover:bg-blue-900 hover:text-white transition-colors duration-300">
+                  PROFILE
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- Right: Navigation -->
-        <div class="flex flex-col items-start flex-1 min-w-[200px]">
-          <h3 class="text-white font-poppins font-semibold text-lg mb-3">Navigasi</h3>
-          <ul class="flex flex-col gap-2 w-full">
-            <li>
-              <a href="../../../index.html"
-                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                HOME
-              </a>
-            </li>
-            <li>
-              <a href="portfolio.html"
-                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                PORTFOLIO
-              </a>
-            </li>
-            <li>
-              <a href="blog.html"
-                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                BLOG
-              </a>
-            </li>
-            <li>
-              <a href="store.html"
-                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                STORE
-              </a>
-            </li>
-            <li>
-              <a href="profile.html"
-                class="block w-full px-4 py-2 rounded-md font-poppins font-bold text-white hover:bg-blue-900 hover:text-white transition-colors duration-300">
-                PROFILE
-              </a>
-            </li>
-          </ul>
+        <!-- Divider -->
+        <hr class="border-t border-blue-300 my-8" />
+        <!-- Copyright -->
+        <div class="text-center">
+          <p class="text-white font-poppins font-normal text-base mb-2">
+            &copy; 2025 Ervin Erviansyah. All rights reserved.
+          </p>
         </div>
-      </div>
-      <!-- Divider -->
-      <hr class="border-t border-blue-300 my-8">
-      <!-- Copyright -->
-      <div class="text-center">
-        <p class="text-white font-poppins font-normal text-base mb-2">
-          &copy; 2025 Ervin Erviansyah. All rights reserved.
-        </p>
-      </div>
-    </section>
-  </footer>
+      </section>
+    </footer>
 
 </body>
 
