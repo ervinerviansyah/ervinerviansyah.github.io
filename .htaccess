@@ -12,3 +12,6 @@ RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
 # Jika file .html ada, load file-nya walau tanpa .html
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^.]+)$ $1.html [L]
+
+# 404
+ErrorDocument 404 /public/error/404.html
